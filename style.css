@@ -112,4 +112,8 @@ footer {
 
 .footer-menu {
   color: white;
+}
+.footer-menu .logo {
+  font-family: shrikhand;
+  font-weight: 200;
 }/*# sourceMappingURL=style.css.map */
