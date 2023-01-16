@@ -4,10 +4,12 @@ $tertiarycolor: #99E2D0;
 
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 15px;
 }
-
+    header img {
+        height: 40px;
+    }
 
 body {
     font-family: Roboto, arial, sans-serif;
@@ -31,10 +33,14 @@ body {
     padding: 15px 5px 0px 5px;
     font-size: x-large;
     font-family: shrikhand;
+}
 
-    i.fa-solid.fa-heart {
-        display: none;
-    }
+i.fa-regular.fa-heart:hover {
+    cursor: pointer;
+}
+
+i.fa-solid.fa-heart {
+    display: none;
 }
 
 .menu-background {
@@ -86,13 +92,43 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-
-    button {
-        border-radius: 30px;
-        border-color: transparent;
-        background-image: linear-gradient(#ff79da, #9356dc);
-        padding: 13px 17px;
-        color: white;
-        box-shadow: 3px 3px 0px 0px rgb(0 0 0 / 10%);
-    }
 }
+
+.order button {
+    border-radius: 30px;
+    border-color: transparent;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    padding: 13px 50px;
+    color: white;
+    box-shadow: 3px 3px 0px 0px rgb(0 0 0 / 10%);
+}
+
+.order button:hover {
+    cursor: pointer;
+}
+
+footer {
+    background-color: #4e4d4d;
+}
+
+.footer-content img {
+    width: 100px;
+    color: white;
+}
+
+.footer-content {
+    padding: 15px 10px;
+}
+
+.footer-menu {
+    color: white;
+}
+    .footer-menu a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-menu .logo {
+        font-family: shrikhand;
+        font-weight: 200;
+    }

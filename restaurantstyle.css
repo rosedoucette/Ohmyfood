@@ -1,7 +1,11 @@
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 15px;
+}
+
+header img {
+  height: 40px;
 }
 
 body {
@@ -26,7 +30,12 @@ body button {
   font-size: x-large;
   font-family: shrikhand;
 }
-.menu-title i.fa-solid.fa-heart {
+
+i.fa-regular.fa-heart:hover {
+  cursor: pointer;
+}
+
+i.fa-solid.fa-heart {
   display: none;
 }
 
@@ -81,11 +90,43 @@ body button {
   justify-content: center;
   padding: 20px;
 }
+
 .order button {
   border-radius: 30px;
   border-color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
-  padding: 13px 17px;
+  padding: 13px 50px;
   color: white;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.order button:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #4e4d4d;
+}
+
+.footer-content img {
+  width: 100px;
+  color: white;
+}
+
+.footer-content {
+  padding: 15px 10px;
+}
+
+.footer-menu {
+  color: white;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-menu .logo {
+  font-family: shrikhand;
+  font-weight: 200;
 }/*# sourceMappingURL=restaurantstyle.css.map */
