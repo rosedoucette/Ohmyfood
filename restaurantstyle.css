@@ -2,6 +2,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 15px;
+  align-items: center;
 }
 
 header img {
@@ -10,15 +11,6 @@ header img {
 
 body {
   font-family: Roboto, arial, sans-serif;
-}
-body button {
-  width: 150px;
-  border-radius: 30px;
-  border-color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  padding: 13px 17px;
-  color: white;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .menu-title {
@@ -29,14 +21,6 @@ body button {
   padding: 15px 5px 0px 5px;
   font-size: x-large;
   font-family: shrikhand;
-}
-
-i.fa-regular.fa-heart:hover {
-  cursor: pointer;
-}
-
-i.fa-solid.fa-heart {
-  display: none;
 }
 
 .menu-background {
@@ -67,15 +51,19 @@ i.fa-solid.fa-heart {
 
 .course-container {
   display: flex;
-  flex-direction: column;
   border: 1px solid;
   border-color: #f1f1f1;
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
-  padding: 5px;
+  padding: 10px;
+  margin: 15px 0px;
   white-space: pre;
   line-height: 25px;
+  align-items: center;
+}
+.course-container:hover {
+  cursor: pointer;
 }
 
 .course-container p {

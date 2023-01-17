@@ -6,6 +6,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 15px;
+    align-items: center;
 }
     header img {
         height: 40px;
@@ -13,16 +14,6 @@ header {
 
 body {
     font-family: Roboto, arial, sans-serif;
-
-    button {
-        width: 150px;
-        border-radius: 30px;
-        border-color: transparent;
-        background-image: linear-gradient(#ff79da, #9356dc);
-        padding: 13px 17px;
-        color: white;
-        box-shadow: 3px 3px 0px 0px rgb(0 0 0 / 10%);
-    }
 }
 
 .menu-title {
@@ -35,13 +26,6 @@ body {
     font-family: shrikhand;
 }
 
-i.fa-regular.fa-heart:hover {
-    cursor: pointer;
-}
-
-i.fa-solid.fa-heart {
-    display: none;
-}
 
 .menu-background {
     background-color: #f1f1f1;
@@ -63,22 +47,26 @@ i.fa-solid.fa-heart {
 }
 
 .courses p {
-    border-bottom: solid #99E2D0;
+    border-bottom: solid $tertiarycolor;
     width: 30px;
     text-transform: uppercase;
 }
 
 .course-container {
     display: flex;
-    flex-direction: column;
     border: 1px solid;
     border-color: #f1f1f1;
     border-radius: 20px;
     overflow: hidden;
     background-color: white;
-    padding: 5px;
+    padding: 10px;
+    margin: 15px 0px;
     white-space: pre;
     line-height: 25px;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .course-container p {
