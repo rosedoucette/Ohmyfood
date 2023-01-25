@@ -2,9 +2,11 @@ header {
   display: flex;
   justify-content: center;
   padding: 15px;
+  align-items: center;
 }
 header a {
-  background-color: transparent;
+  position: absolute;
+  left: 20px;
 }
 header img {
   height: 40px;
@@ -74,6 +76,10 @@ footer {
   font-weight: 200;
 }
 
+header a {
+  position: inherit;
+}
+
 .location {
   display: flex;
   background-color: #f2f2f2;
@@ -112,7 +118,12 @@ footer {
 .how-it-works p {
   font-size: x-large;
 }
-.how-it-works button {
+.how-it-works .buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.how-it-works .buttons button {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
@@ -120,20 +131,25 @@ footer {
   border-color: transparent;
   box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.05);
   align-content: space-between;
-  width: 100%;
   padding: 25px;
   justify-content: center;
   margin: 20px 30px;
   font-size: larger;
 }
-.how-it-works button i {
+.how-it-works .buttons button i {
   color: #a1a0a0;
 }
-.how-it-works button:hover {
+.how-it-works .buttons button .fa-circle {
+  color: #9356DC;
+}
+.how-it-works .buttons button .fa-1, .how-it-works .buttons button .fa-2, .how-it-works .buttons button .fa-3 {
+  color: white;
+}
+.how-it-works .buttons button:hover {
   background-color: rgba(146, 86, 220, 0.1568627451);
   cursor: pointer;
 }
-.how-it-works button:hover i {
+.how-it-works .buttons button:hover i {
   color: #9356dc;
 }
 
@@ -222,4 +238,28 @@ footer {
   background: radial-gradient(circle at top right, #9356dc, #ff79da 50%);
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+@media screen and (min-width: 992px) {
+  header a {
+    position: inherit;
+  }
+  .how-it-works {
+    justify-content: space-around;
+  }
+  .how-it-works .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+  }
+  .restaurant-cards {
+    display: flex;
+    width: 50%;
+  }
+  .restaurant-cards .newcontainer {
+    position: absolute;
+    margin-left: 380px;
+  }
 }/*# sourceMappingURL=style.css.map */

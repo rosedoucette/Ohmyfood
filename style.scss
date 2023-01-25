@@ -1,5 +1,8 @@
 @import "global.scss";
 
+header a {
+    position: inherit;
+}
 
 .location {
     display: flex;
@@ -43,30 +46,42 @@
         font-size: x-large;
     }
 
-    button {
+    .buttons {
         display: flex;
-        flex-wrap: wrap;
-        background-color: white;
-        border-radius: 20px;
-        border-color: transparent;
-        box-shadow: 5px 5px 15px 1px rgb(0 0 0 / 5%);
-        align-content: space-between;
+        flex-direction: column;
         width: 100%;
-        padding: 25px;
-        justify-content: center;
-        margin: 20px 30px;
-        font-size: larger;
 
-        i {
-            color: #a1a0a0;
-        }
-
-        &:hover {
-            background-color: #9256dc28;
-            cursor: pointer;
+        button {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 20px;
+            border-color: transparent;
+            box-shadow: 5px 5px 15px 1px rgb(0 0 0 / 5%);
+            align-content: space-between;
+            padding: 25px;
+            justify-content: center;
+            margin: 20px 30px;
+            font-size: larger;
 
             i {
-                color: #9356dc;
+                color: #a1a0a0;
+            }
+
+            .fa-circle {
+                color: $primarycolor;
+            }
+            .fa-1, .fa-2, .fa-3 {
+                color: white;
+            }
+
+            &:hover {
+                background-color: #9256dc28;
+                cursor: pointer;
+
+                i {
+                    color: #9356dc;
+                }
             }
         }
     }
@@ -163,6 +178,34 @@
                     #9356dc,
                     #ff79da 50%);
             background-clip: text;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header a {
+        position: inherit;
+    }
+
+    .how-it-works {
+        justify-content: space-around;
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .restaurant-cards {
+        display: flex;
+        width: 50%;
+
+        .newcontainer {
+            position: absolute;
+            margin-left: 380px;
         }
     }
 }
