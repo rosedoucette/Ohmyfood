@@ -135,14 +135,24 @@ header a {
   justify-content: center;
   margin: 20px 30px;
   font-size: larger;
+  position: relative;
 }
 .how-it-works .buttons button i {
   color: #a1a0a0;
 }
-.how-it-works .buttons button .fa-circle {
-  color: #9356DC;
+.how-it-works .buttons button .icon-background {
+  background-color: #9356DC;
+  padding: 10px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 20px);
 }
-.how-it-works .buttons button .fa-1, .how-it-works .buttons button .fa-2, .how-it-works .buttons button .fa-3 {
+.how-it-works .buttons button .fa-1,
+.how-it-works .buttons button .fa-2,
+.how-it-works .buttons button .fa-3 {
   color: white;
 }
 .how-it-works .buttons button:hover {
@@ -151,6 +161,9 @@ header a {
 }
 .how-it-works .buttons button:hover i {
   color: #9356dc;
+}
+.how-it-works .buttons button:hover .icon-background i {
+  color: white;
 }
 
 .restaurants {
@@ -181,6 +194,7 @@ header a {
 .restaurant-cards a .image-container {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .restaurant-cards a .image-container img {
   width: 100%;
@@ -199,8 +213,8 @@ header a {
   justify-items: center;
   position: absolute;
   z-index: 2;
-  margin-top: -380px;
-  margin-left: 850px;
+  right: 20px;
+  top: 20px;
 }
 .newcontainer .new {
   color: #57b19a;
@@ -240,6 +254,16 @@ header a {
           background-clip: text;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurant-card-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurant-card-container .restaurant-cards {
+    display: flex;
+    width: 47%;
+  }
+}
 @media screen and (min-width: 992px) {
   header a {
     position: inherit;
@@ -254,12 +278,12 @@ header a {
     justify-content: center;
     width: 100%;
   }
-  .restaurant-cards {
+  .restaurant-card-container {
     display: flex;
-    width: 50%;
+    flex-direction: row;
   }
-  .restaurant-cards .newcontainer {
-    position: absolute;
-    margin-left: 380px;
+  .restaurant-card-container .restaurant-cards {
+    display: flex;
+    width: 47%;
   }
 }/*# sourceMappingURL=style.css.map */

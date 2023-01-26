@@ -63,15 +63,26 @@ header a {
             justify-content: center;
             margin: 20px 30px;
             font-size: larger;
+            position: relative;
 
             i {
                 color: #a1a0a0;
             }
 
-            .fa-circle {
-                color: $primarycolor;
+            .icon-background {
+                background-color: $primarycolor;
+                padding: 10px;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                left: -20px;
+                top: calc(50% - 20px);
             }
-            .fa-1, .fa-2, .fa-3 {
+
+            .fa-1,
+            .fa-2,
+            .fa-3 {
                 color: white;
             }
 
@@ -81,6 +92,12 @@ header a {
 
                 i {
                     color: #9356dc;
+                }
+
+                .icon-background {
+                    i {
+                        color: white;
+                    }
                 }
             }
         }
@@ -115,6 +132,7 @@ header a {
         .image-container {
             width: 100%;
             overflow: hidden;
+            position: relative;
 
             img {
                 width: 100%;
@@ -133,8 +151,8 @@ header a {
     justify-items: center;
     position: absolute;
     z-index: 2;
-    margin-top: -380px;
-    margin-left: 850px;
+    right: 20px;
+    top: 20px;
 
     .new {
         color: #57b19a;
@@ -182,6 +200,19 @@ header a {
     }
 }
 
+
+@media screen and (min-width: 768px) {
+    .restaurant-card-container {
+        display: flex;
+        flex-direction: row;
+
+        .restaurant-cards {
+            display: flex;
+            width: 47%;
+        }
+    }
+}
+
 @media screen and (min-width: 992px) {
     header a {
         position: inherit;
@@ -199,13 +230,13 @@ header a {
         }
     }
 
-    .restaurant-cards {
+    .restaurant-card-container {
         display: flex;
-        width: 50%;
+        flex-direction: row;
 
-        .newcontainer {
-            position: absolute;
-            margin-left: 380px;
+        .restaurant-cards {
+            display: flex;
+            width: 47%;
         }
     }
 }

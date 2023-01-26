@@ -8,9 +8,10 @@ header {
     padding: 15px;
     align-items: center;
 }
-    header img {
-        height: 40px;
-    }
+
+header img {
+    height: 40px;
+}
 
 body {
     font-family: Roboto, arial, sans-serif;
@@ -64,6 +65,7 @@ body {
     white-space: pre;
     line-height: 25px;
     align-items: center;
+
     &:hover {
         cursor: pointer;
     }
@@ -111,12 +113,44 @@ footer {
 .footer-menu {
     color: white;
 }
-    .footer-menu a {
-        text-decoration: none;
-        color: white;
-    }
 
-    .footer-menu .logo {
-        font-family: shrikhand;
-        font-weight: 200;
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-menu .logo {
+    font-family: shrikhand;
+    font-weight: 200;
+}
+
+@media screen and (min-width: 768px) {
+
+    .all-courses {
+        display: flex;
+        gap: 20px;
+
+        .course-container {
+            width: 100%;
+            flex-wrap: wrap;
+        }
     }
+}
+
+
+@media screen and (min-width: 992px) {
+    .courses {
+        display: flex;
+        flex-direction: column;
+
+        .all-courses {
+            display: flex;
+            gap: 20px;
+
+            .course-container {
+                width: 100%;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}

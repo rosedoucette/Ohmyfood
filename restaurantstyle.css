@@ -117,4 +117,29 @@ footer {
 .footer-menu .logo {
   font-family: shrikhand;
   font-weight: 200;
+}
+
+@media screen and (min-width: 768px) {
+  .all-courses {
+    display: flex;
+    gap: 20px;
+  }
+  .all-courses .course-container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .courses {
+    display: flex;
+    flex-direction: column;
+  }
+  .courses .all-courses {
+    display: flex;
+    gap: 20px;
+  }
+  .courses .all-courses .course-container {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
 }/*# sourceMappingURL=restaurantstyle.css.map */
