@@ -80,6 +80,66 @@ header a {
   position: inherit;
 }
 
+.loader {
+  -webkit-animation: loading 5s ease-in #6e6e6e;
+          animation: loading 5s ease-in #6e6e6e;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.loader .fa-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: spinning 1s linear infinite;
+          animation: spinning 1s linear infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes loading {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    rotate: 0deg;
+    color: #9356DC;
+  }
+  50% {
+    rotate: 180deg;
+    color: #FF79DA;
+  }
+  100% {
+    rotate: 360deg;
+    color: #99E2D0;
+  }
+}
+@keyframes spinning {
+  0% {
+    rotate: 0deg;
+    color: #9356DC;
+  }
+  50% {
+    rotate: 180deg;
+    color: #FF79DA;
+  }
+  100% {
+    rotate: 360deg;
+    color: #99E2D0;
+  }
+}
 .location {
   display: flex;
   background-color: #f2f2f2;

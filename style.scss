@@ -4,6 +4,44 @@ header a {
     position: inherit;
 }
 
+.loader {
+    animation: loading 5s ease-in #6e6e6e;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .fa-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: spinning 1s linear infinite;
+    }
+}
+
+@keyframes loading {
+    0% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes spinning {
+    0% {
+        rotate: (0deg);
+        color:  $primarycolor;
+    }
+    50% {
+        rotate: (180deg);
+        color:  $secondarycolor;
+    }
+    100% {
+        rotate: (360deg);
+        color:  $tertiarycolor;
+    }
+}
+
 .location {
     display: flex;
     background-color: #f2f2f2;
