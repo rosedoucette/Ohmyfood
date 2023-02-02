@@ -5,16 +5,25 @@ header a {
 }
 
 .loader {
-    animation: loading 5s ease-in #6e6e6e;
     position: relative;
     height: 100%;
     width: 100%;
+    &>* {
+        animation: magic 1s linear;
+        animation-delay: 1s;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+    }
 
     .fa-spinner {
-        display: flex;
         justify-content: center;
         align-items: center;
-        animation: spinning 1s linear infinite;
+        animation: spinning 1s linear infinite, loading 0s 1s;
+        z-index: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
     }
 }
 
@@ -24,6 +33,15 @@ header a {
     }
     100% {
         display: none;
+    }
+}
+
+@keyframes magic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -116,6 +134,7 @@ header a {
                 position: absolute;
                 left: -20px;
                 top: calc(50% - 20px);
+                box-sizing: unset;
             }
 
             .fa-1,

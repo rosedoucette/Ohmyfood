@@ -76,6 +76,11 @@ body {
   text-transform: uppercase;
 }
 
+.all-courses {
+  display: flex;
+  flex-direction: column;
+}
+
 .course-container {
   display: flex;
   border: 1px solid;
@@ -88,6 +93,9 @@ body {
   white-space: pre;
   line-height: 25px;
   align-items: center;
+}
+.course-containereuro {
+  align-items: flex-end;
 }
 .course-container:hover {
   cursor: pointer;
@@ -149,6 +157,7 @@ footer {
 @media screen and (min-width: 768px) {
   .all-courses {
     display: flex;
+    flex-direction: row;
     gap: 20px;
   }
   .all-courses .course-container {

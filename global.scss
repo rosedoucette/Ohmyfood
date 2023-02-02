@@ -2,11 +2,17 @@ $primarycolor: #9356DC;
 $secondarycolor: #FF79DA;
 $tertiarycolor: #99E2D0;
 
+* {
+    box-sizing: border-box;
+}
 header {
     display: flex;
     justify-content: center;
     padding: 15px;
     align-items: center;
+    background-color: white;
+    z-index: 1;
+    position: relative;
 a {
     position: absolute;
     left: 20px;
@@ -59,7 +65,7 @@ body {
     }
 }
 
-footer {
+#footer {
     background-color: #4e4d4d;
 }
 
