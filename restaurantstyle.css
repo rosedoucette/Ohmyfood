@@ -94,13 +94,74 @@ body {
   line-height: 25px;
   align-items: center;
 }
+.course-container .checkbox {
+  display: none;
+}
+.course-container .checkbox:hover {
+  display: flex;
+  background: #99E2D0;
+}
+.course-container i {
+  display: none;
+}
+.course-container i:hover {
+  display: flex;
+  padding: 5px;
+  -webkit-animation: checkbox 2s forwards;
+          animation: checkbox 2s forwards;
+}
 .course-containereuro {
   align-items: flex-end;
 }
 .course-container:hover {
   cursor: pointer;
+  -webkit-animation: slide 2s forwards;
+          animation: slide 2s forwards;
 }
 
+@-webkit-keyframes slide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes checkbox {
+  0% {
+    rotate: 0deg;
+    display: none;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+    display: flex;
+  }
+}
+@keyframes checkbox {
+  0% {
+    rotate: 0deg;
+    display: none;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+    display: flex;
+  }
+}
 .course-container p {
   border-bottom: none;
   text-transform: none;
@@ -162,7 +223,8 @@ footer {
   }
   .all-courses .course-container {
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: unset;
   }
 }
 @media screen and (min-width: 992px) {

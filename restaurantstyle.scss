@@ -87,12 +87,58 @@ body {
     line-height: 25px;
     align-items: center;
 
+    .checkbox {
+        display: none;
+    }
+
+    .checkbox:hover {
+        display: flex;
+        background: $tertiarycolor;
+    }
+
+    i {
+        display: none;
+    }
+
+    i:hover {
+        display: flex;
+        padding: 5px;
+        animation: checkbox 2s forwards;
+    }
+
     &euro {
         align-items: flex-end;
     }
 
     &:hover {
         cursor: pointer;
+        animation: slide 2s forwards;
+    }
+}
+
+@keyframes slide {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes checkbox {
+    0% {
+        rotate: (0deg);
+        display: none;
+    }
+
+    50% {
+        rotate: (180deg);
+    }
+
+    100% {
+        rotate: (360deg);
+        display: flex;
     }
 }
 
@@ -158,7 +204,8 @@ footer {
 
         .course-container {
             width: 100%;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            white-space: unset;
         }
     }
 }
