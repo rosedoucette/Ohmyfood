@@ -41,23 +41,9 @@ body {
 
 .courses {
   margin: 15px;
-  -webkit-animation: fade 3s;
-          animation: fade 3s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateY(200%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fade 3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade {
@@ -74,6 +60,7 @@ body {
   border-bottom: solid #99E2D0;
   width: 30px;
   text-transform: uppercase;
+  padding: 10px;
 }
 
 .all-courses {
@@ -88,44 +75,40 @@ body {
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
-  padding: 10px;
   margin: 15px 0px;
   white-space: pre;
   line-height: 25px;
   align-items: center;
+  justify-content: space-between;
+}
+.course-container > strong {
+  margin-right: 10px;
 }
 .course-container .checkbox {
   display: none;
-}
-.course-container .checkbox:hover {
-  display: flex;
-  background: #99E2D0;
+  height: 100%;
+  width: 0px;
+  transition: width 1s;
 }
 .course-container i {
   display: none;
 }
-.course-container i:hover {
-  display: flex;
-  padding: 5px;
-  -webkit-animation: checkbox 2s forwards;
-          animation: checkbox 2s forwards;
-}
-.course-containereuro {
-  align-items: flex-end;
-}
 .course-container:hover {
   cursor: pointer;
-  -webkit-animation: slide 2s forwards;
-          animation: slide 2s forwards;
 }
-
-@-webkit-keyframes slide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 75%;
-  }
+.course-container:hover P {
+  animation: slide 2s forwards;
+}
+.course-container:hover .checkbox {
+  display: flex;
+  background: #99E2D0;
+  width: 102px;
+}
+.course-container:hover i {
+  display: block;
+  padding: 35px;
+  color: white;
+  animation: checkbox 1s forwards;
 }
 
 @keyframes slide {
@@ -134,19 +117,6 @@ body {
   }
   100% {
     width: 75%;
-  }
-}
-@-webkit-keyframes checkbox {
-  0% {
-    rotate: 0deg;
-    display: none;
-  }
-  50% {
-    rotate: 180deg;
-  }
-  100% {
-    rotate: 360deg;
-    display: flex;
   }
 }
 @keyframes checkbox {
@@ -215,7 +185,7 @@ footer {
   font-weight: 200;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .all-courses {
     display: flex;
     flex-direction: row;

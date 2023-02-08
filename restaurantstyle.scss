@@ -67,6 +67,7 @@ body {
     border-bottom: solid $tertiarycolor;
     width: 30px;
     text-transform: uppercase;
+    padding: 10px;
 }
 
 .all-courses {
@@ -81,39 +82,47 @@ body {
     border-radius: 20px;
     overflow: hidden;
     background-color: white;
-    padding: 10px;
     margin: 15px 0px;
     white-space: pre;
     line-height: 25px;
     align-items: center;
+    justify-content: space-between;
 
+    & > strong {
+        margin-right: 10px;
+    }
     .checkbox {
         display: none;
-    }
-
-    .checkbox:hover {
-        display: flex;
-        background: $tertiarycolor;
+        height: 100%;
+        width: 0px;
+        transition: width 1s;
     }
 
     i {
         display: none;
     }
 
-    i:hover {
-        display: flex;
-        padding: 5px;
-        animation: checkbox 2s forwards;
-    }
-
-    &euro {
-        align-items: flex-end;
-    }
-
     &:hover {
+        P {
+            animation: slide 2s forwards;
+        }
+
+        .checkbox {
+            display: flex;
+            background: $tertiarycolor;
+            width: 102px;
+        }
+
+        i {
+            display: block;
+            padding: 35px;
+            color: white;
+            animation: checkbox 1s forwards;
+        }
+
         cursor: pointer;
-        animation: slide 2s forwards;
     }
+
 }
 
 @keyframes slide {
@@ -195,7 +204,7 @@ footer {
     font-weight: 200;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
     .all-courses {
         display: flex;

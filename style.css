@@ -93,10 +93,8 @@ header a {
   width: 100%;
 }
 .loader > * {
-  -webkit-animation: magic 1s linear;
-          animation: magic 1s linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: magic 1s linear;
+  animation-delay: 1s;
   background-color: white;
   z-index: 2;
   position: relative;
@@ -104,21 +102,11 @@ header a {
 .loader .fa-spinner {
   justify-content: center;
   align-items: center;
-  -webkit-animation: spinning 1s linear infinite, loading 0s 1s;
-          animation: spinning 1s linear infinite, loading 0s 1s;
+  animation: spinning 1s linear infinite, loading 0s 1s;
   z-index: 0;
   position: absolute;
   left: 50%;
   top: 50%;
-}
-
-@-webkit-keyframes loading {
-  0% {
-    display: block;
-  }
-  100% {
-    display: none;
-  }
 }
 
 @keyframes loading {
@@ -129,34 +117,12 @@ header a {
     display: none;
   }
 }
-@-webkit-keyframes magic {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes magic {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes spinning {
-  0% {
-    rotate: 0deg;
-    color: #9356DC;
-  }
-  50% {
-    rotate: 180deg;
-    color: #FF79DA;
-  }
-  100% {
-    rotate: 360deg;
-    color: #99E2D0;
   }
 }
 @keyframes spinning {
@@ -299,7 +265,6 @@ header a {
 
 .newcontainer {
   background-color: #99E2D0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 25px;
