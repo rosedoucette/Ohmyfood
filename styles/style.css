@@ -11,10 +11,12 @@ header {
   z-index: 1;
   position: relative;
 }
+
 header a {
   position: absolute;
   left: 20px;
 }
+
 header img {
   height: 40px;
 }
@@ -39,21 +41,25 @@ body {
   right: 15px;
   padding: 15px;
 }
+
 .hearts i.fa-solid {
   display: none;
 }
+
 .hearts:hover {
   cursor: pointer;
 }
+
 .hearts:hover i.fa-regular {
   display: none;
 }
+
 .hearts:hover i.fa-solid {
   display: block;
   color: transparent;
   background: radial-gradient(circle at top right, #9356dc, #ff79da 50%);
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 
 #footer {
@@ -92,13 +98,15 @@ header a {
   height: 100%;
   width: 100%;
 }
-.loader > * {
+
+.loader>* {
   animation: magic 1s linear;
   animation-delay: 1s;
   background-color: white;
   z-index: 2;
   position: relative;
 }
+
 .loader .fa-spinner {
   justify-content: center;
   align-items: center;
@@ -113,32 +121,39 @@ header a {
   0% {
     display: block;
   }
+
   100% {
     display: none;
   }
 }
+
 @keyframes magic {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes spinning {
   0% {
     rotate: 0deg;
     color: #9356DC;
   }
+
   50% {
     rotate: 180deg;
     color: #FF79DA;
   }
+
   100% {
     rotate: 360deg;
     color: #99E2D0;
   }
 }
+
 .location {
   display: flex;
   background-color: #f2f2f2;
@@ -153,9 +168,11 @@ header a {
   background-color: rgba(242, 242, 242, 0.3215686275);
   padding: 40px;
 }
+
 .about p {
   font-size: x-large;
 }
+
 .about button {
   border-radius: 30px;
   border-color: transparent;
@@ -165,6 +182,7 @@ header a {
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
   margin: 10px;
 }
+
 .about button:hover {
   cursor: pointer;
 }
@@ -174,14 +192,17 @@ header a {
   flex-direction: column;
   align-items: center;
 }
+
 .how-it-works p {
   font-size: x-large;
 }
+
 .how-it-works .buttons {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .how-it-works .buttons button {
   display: flex;
   flex-wrap: wrap;
@@ -196,9 +217,11 @@ header a {
   font-size: larger;
   position: relative;
 }
+
 .how-it-works .buttons button i {
   color: #a1a0a0;
 }
+
 .how-it-works .buttons button .icon-background {
   background-color: #9356DC;
   padding: 10px;
@@ -210,18 +233,22 @@ header a {
   top: calc(50% - 20px);
   box-sizing: unset;
 }
+
 .how-it-works .buttons button .fa-1,
 .how-it-works .buttons button .fa-2,
 .how-it-works .buttons button .fa-3 {
   color: white;
 }
+
 .how-it-works .buttons button:hover {
   background-color: rgba(146, 86, 220, 0.1568627451);
   cursor: pointer;
 }
+
 .how-it-works .buttons button:hover i {
   color: #9356dc;
 }
+
 .how-it-works .buttons button:hover .icon-background i {
   color: white;
 }
@@ -247,20 +274,23 @@ header a {
   overflow: hidden;
   background-color: white;
 }
+
 .restaurant-cards a {
   text-decoration: none;
   color: black;
 }
+
 .restaurant-cards a .image-container {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
+
 .restaurant-cards a .image-container img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .newcontainer {
@@ -275,6 +305,7 @@ header a {
   right: 20px;
   top: 20px;
 }
+
 .newcontainer .new {
   color: #57b19a;
   display: flex;
@@ -286,6 +317,7 @@ header a {
   padding: 10px 10px;
   position: relative;
 }
+
 .restaurant-info strong,
 .restaurant-info p {
   display: block;
@@ -296,21 +328,25 @@ header a {
   top: 10px;
   right: 15px;
 }
+
 .hearts i.fa-solid {
   display: none;
 }
+
 .hearts:hover {
   cursor: pointer;
 }
+
 .hearts:hover i.fa-regular {
   display: none;
 }
+
 .hearts:hover i.fa-solid {
   display: block;
   color: transparent;
   background: radial-gradient(circle at top right, #9356dc, #ff79da 50%);
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 
 @media screen and (min-width: 768px) {
@@ -318,18 +354,22 @@ header a {
     display: flex;
     flex-direction: row;
   }
+
   .restaurant-card-container .restaurant-cards {
     display: flex;
     width: 47%;
   }
 }
+
 @media screen and (min-width: 992px) {
   header a {
     position: inherit;
   }
+
   .how-it-works {
     justify-content: space-around;
   }
+
   .how-it-works .buttons {
     display: flex;
     flex-direction: row;
@@ -337,12 +377,16 @@ header a {
     justify-content: center;
     width: 100%;
   }
+
   .restaurant-card-container {
     display: flex;
     flex-direction: row;
   }
+
   .restaurant-card-container .restaurant-cards {
     display: flex;
     width: 47%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

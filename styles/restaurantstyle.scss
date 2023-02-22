@@ -88,9 +88,10 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    & > strong {
+    &>strong {
         margin-right: 10px;
     }
+
     .checkbox {
         display: none;
         height: 100%;
@@ -139,10 +140,6 @@ body {
     0% {
         rotate: (0deg);
         display: none;
-    }
-
-    50% {
-        rotate: (180deg);
     }
 
     100% {
