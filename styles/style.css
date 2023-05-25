@@ -139,17 +139,17 @@ header a {
 
 @keyframes spinning {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
     color: #9356DC;
   }
 
   50% {
-    rotate: 180deg;
+    transform: rotate(180deg);
     color: #FF79DA;
   }
 
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
     color: #99E2D0;
   }
 }
