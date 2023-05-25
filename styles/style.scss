@@ -8,6 +8,7 @@ header a {
     position: relative;
     height: 100%;
     width: 100%;
+
     &>* {
         animation: magic 1s linear;
         animation-delay: 1s;
@@ -31,6 +32,7 @@ header a {
     0% {
         display: block;
     }
+
     100% {
         display: none;
     }
@@ -40,6 +42,7 @@ header a {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -47,16 +50,18 @@ header a {
 
 @keyframes spinning {
     0% {
-        rotate: (0deg);
-        color:  $primarycolor;
+        transform: rotate(0deg);
+        color: $primarycolor;
     }
+
     50% {
-        rotate: (180deg);
-        color:  $secondarycolor;
+        transform: rotate(180deg);
+        color: $secondarycolor;
     }
+
     100% {
-        rotate: (360deg);
-        color:  $tertiarycolor;
+        transform: rotate(360deg);
+        color: $tertiarycolor;
     }
 }
 
